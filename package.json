@@ -1,0 +1,31 @@
+{
+  "name": "fuq",
+  "version": "0.0.0",
+  "description": "Functional Queue <= 140 chars",
+  "main": "fuq.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tarabyte/fuq.git"
+  },
+  "keywords": [
+    "functional",
+    "queue",
+    "deferred",
+    "promise",
+    "140chars"
+  ],
+  "author": "tarabyte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tarabyte/fuq/issues"
+  },
+  "homepage": "https://github.com/Tarabyte/fuq",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-size": "^0.3.1",
+    "gulp-jasmine": "^0.2.0"
+  }
+}

@@ -1,0 +1,1 @@
+exports.src = "FuQ=function(c,o){function r(d){for(o=d;(d=c.shift())&&!((o=d(o))&&o.q&&o.q(r)););}c=[];return{run:r,q:{q:c.push.bind(c)}}}";
