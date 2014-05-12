@@ -1,6 +1,6 @@
 /*global require, describe, it, expect, setTimeout, waitsFor */
 delete require.cache[require.resolve('../fuq.js')];
-var fuq = require('../fuq.js');
+var fuq = require('../fuq.js'), FuQ;
 
 describe('FuQ src', function() {
     it('should be a string', function() {
@@ -8,14 +8,18 @@ describe('FuQ src', function() {
     });
     
     it('should <= 140 chars', function() {
-        expect(fuq.src.length).toBeLessThan(140);    
+        var len = fuq.src.length;
+        console.log('Total length: ' + len);
+        expect(len).toBeLessThan(140);    
     });
     
     it('should be compilable', function() {
         eval(fuq.src);
-        expect(FuQ).toBeDefined();
+        expect(true).toBe(true);
     });
 });
+
+FuQ = eval(fuq.src);
 
 
 describe('FuQ constructor', function() {
@@ -24,6 +28,7 @@ describe('FuQ constructor', function() {
     }); 
     
     var queue = FuQ();
+    
     it('should create a queue', function() {
         expect(queue).toBeDefined();
     });

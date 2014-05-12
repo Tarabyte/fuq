@@ -1,10 +1,10 @@
 FuQ
 ===
 
-Functional Queue in &lt;= 140 chars of code.
+Functional Queue in &lt;= 140 chars of code. Actually it is 122 now, so there is 18 symbols more you can add. :)
 
 ```javascript
-FuQ=function(c,o){function r(d){for(o=d;(d=c.shift())&&!((o=d(o))&&o.q&&o.q(r)););}c=[];return{run:r,q:{q:c.push.bind(c)}}}
+FuQ=function(c,o){return{run:function r(d){for(o=d;(d=c.shift())&&!((o=d(o))&&o.q&&o.q(r)););},q:{q:(c=[]).push.bind(c)}}}
 ```
 
 Library provides an easy way to chain asynchrnous function calls.
